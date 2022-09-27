@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		17077CDA6C8756A917E78659 /* Pods-LYDataBaseManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDataBaseManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-LYDataBaseManager_Example/Pods-LYDataBaseManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		31BF24368A621E719A82AF3A /* Pods-LYDataBaseManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDataBaseManager_Example.release.xcconfig"; path = "Target Support Files/Pods-LYDataBaseManager_Example/Pods-LYDataBaseManager_Example.release.xcconfig"; sourceTree = "<group>"; };
-		53C2FA0496FFD05A55E839C6 /* LYDataBaseManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LYDataBaseManager.podspec; path = ../LYDataBaseManager.podspec; sourceTree = "<group>"; };
+		53C2FA0496FFD05A55E839C6 /* LYDataBaseManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LYDataBaseManager.podspec; path = ../LYDataBaseManager.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* LYDataBaseManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYDataBaseManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		607FACE51AFB9204008FA782 /* LYDataBaseManager_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYDataBaseManager_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		678E0C821504ED0644700355 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		6A022BC3F64EDE095B1CF6FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		678E0C821504ED0644700355 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6A022BC3F64EDE095B1CF6FD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		7F5D795864B1CFE12F3A3B49 /* Pods-LYDataBaseManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LYDataBaseManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-LYDataBaseManager_Tests/Pods-LYDataBaseManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8B895389BD5B35F80D6C9DC4 /* Pods_LYDataBaseManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYDataBaseManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEBDC415D6C425C9D8204D4 /* Pods_LYDataBaseManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LYDataBaseManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +156,6 @@
 				EB8A6CAF29211465BEB8AA10 /* Pods-LYDataBaseManager_Tests.debug.xcconfig */,
 				7F5D795864B1CFE12F3A3B49 /* Pods-LYDataBaseManager_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -340,10 +340,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-LYDataBaseManager_Example/Pods-LYDataBaseManager_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/LYDataBaseManager/LYDataBaseManager.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LYDataBaseManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -445,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -491,7 +495,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

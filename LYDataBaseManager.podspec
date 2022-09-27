@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'LYDataBaseManager'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of LYDataBaseManager.'
+  s.summary          = 'It is use for manage local database base on RealmSwift'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,19 +18,21 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+It is use for manage local database base on RealmSwift.
+Welcome to use ~
                        DESC
 
-  s.homepage         = 'https://github.com/Sunny/LYDataBaseManager'
+  s.homepage         = 'https://github.com/liangqicai-gitHub/LYDataBaseManager.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Sunny' => '2468751795@qq.com' }
-  s.source           = { :git => 'https://github.com/Sunny/LYDataBaseManager.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/liangqicai-gitHub/LYDataBaseManager.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'LYDataBaseManager/Classes/**/*'
+  s.swift_versions = ['5.0']
   
   # s.resource_bundles = {
   #   'LYDataBaseManager' => ['LYDataBaseManager/Assets/*.png']
@@ -39,4 +41,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'RealmSwift', '10.29.0'
 end

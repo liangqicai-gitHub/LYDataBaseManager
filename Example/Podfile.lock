@@ -9,7 +9,8 @@ PODS:
   - iOSSnapshotTestCase/Core (8.0.0)
   - iOSSnapshotTestCase/SwiftSupport (8.0.0):
     - iOSSnapshotTestCase/Core
-  - LYDataBaseManager (0.1.0)
+  - LYDataBaseManager (0.1.0):
+    - RealmSwift (= 10.29.0)
   - Nimble (10.0.0)
   - Nimble-Snapshots (9.4.0):
     - Nimble-Snapshots/Core (= 9.4.0)
@@ -17,6 +18,11 @@ PODS:
     - iOSSnapshotTestCase (~> 8.0)
     - Nimble
   - Quick (2.2.1)
+  - Realm (10.29.0):
+    - Realm/Headers (= 10.29.0)
+  - Realm/Headers (10.29.0)
+  - RealmSwift (10.29.0):
+    - Realm (= 10.29.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -26,6 +32,9 @@ DEPENDENCIES:
   - Quick (~> 2.2.0)
 
 SPEC REPOS:
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
+    - Realm
+    - RealmSwift
   trunk:
     - FBSnapshotTestCase
     - iOSSnapshotTestCase
@@ -40,11 +49,13 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: a670511f9ee3829c2b9c23e6e68f315fd7b6790f
-  LYDataBaseManager: a96ecde22d56f428526b868177c4305056117359
+  LYDataBaseManager: 058d1dc4008c12c21e2cc32454877461c0980c4c
   Nimble: 5316ef81a170ce87baf72dd961f22f89a602ff84
   Nimble-Snapshots: ef281b908c604f78c8313587e25ea92c8ab513d7
   Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+  Realm: 5596770daeff1ad76c8eb10d5947dc10472da779
+  RealmSwift: 35d8d318b7e5a8dbc7096c2a243184e4d19abcc0
 
-PODFILE CHECKSUM: 1681ea890a7ffb2cede67063a36b015c018ef6f2
+PODFILE CHECKSUM: c7e8627ac6ddb927208a6b17e6d37f475d7b2e32
 
 COCOAPODS: 1.11.3
