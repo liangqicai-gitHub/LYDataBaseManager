@@ -1,0 +1,6 @@
+framework module LYDataBaseManager {
+  umbrella header "LYDataBaseManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
