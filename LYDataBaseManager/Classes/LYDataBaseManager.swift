@@ -33,7 +33,7 @@ extension LYDataBaseManager {
     /// 按照Realm的规范应该每次都新建一个Realm()
     /// 这个config 建议包含 url，schemaVersion，migrationBlock
     /// 外部自己定义的Realm, 也可以参考这个写法
-    public static var ly_keyValueTable: Realm {
+    public static var ly_keyValueDB: Realm {
         let config = Realm.Configuration(
                 fileURL: realmPath(with: "keyValueDB.realm"),
                 schemaVersion: 1, migrationBlock: { migration, oldSchemaVersion in

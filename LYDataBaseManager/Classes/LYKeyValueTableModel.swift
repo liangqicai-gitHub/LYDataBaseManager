@@ -8,10 +8,11 @@
 import RealmSwift
 
 public class LYKeyValueTableModel: Object {
-    @Persisted(primaryKey: true) var key = ""
-    @Persisted var `value` = ""
     
-    convenience init(key: String, value: String) {
+    @Persisted(primaryKey: true) public var key = ""
+    @Persisted public var `value` = ""
+    
+    public convenience init(key: String, value: String) {
         self.init()
         self.key = key
         self.value = value
